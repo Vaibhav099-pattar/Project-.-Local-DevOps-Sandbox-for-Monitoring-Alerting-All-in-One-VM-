@@ -1,0 +1,75 @@
+ Abstract:
+
+This project focuses on building a self-contained DevOps sandbox environment for learning and testing monitoring 
+and alerting tools using a single virtual machine. The VM, built on Red Hat Linux and hosted on VMware, comes pre-configured 
+with Prometheus, Node Exporter, Grafana, and Alertmanager. These tools collectively allow users to collect system metrics, visualize 
+them through dashboards, and receive alerts based on predefined rules. The sandbox serves as a local, production-like setup for beginners
+and professionals looking to practice observability and system monitoring 
+without requiring access to cloud infrastructure.
+
+Introduction:
+Monitoring and alerting are key components of any DevOps strategy, ensuring system reliability, performance, and timely
+incident response. However, learning these tools often requires access to cloud or distributed environments. This project solves that 
+by providing a local, all-in-one VM with the essential monitoring stack installed and configured. Users can simulate CPU/disk/memory alerts, create dashboards, and understand how alerts flow
+through the monitoring pipeline.
+
+Tools Used:
+VMware Workstation/Player – Local VM hosting
+
+Red Hat Linux – OS for running the stack
+
+Prometheus – Metrics collection and alerting rules
+
+Node Exporter – System metrics exporter
+
+Grafana – Dashboard and visualization
+
+Alertmanager – Alert notification and routing
+
+Shell Scripts – Automated setup of all components
+
+
+Architecture:
+
+[Node Exporter]  --->  [Prometheus]  --->  [Alertmanager]
+        |                    |
+        |                    |
+        +--->  [Grafana] <---+
+Prometheus scrapes Node Exporter on port 9100
+
+Alertmanager listens on 9093 for alerts from Prometheus
+
+Grafana queries Prometheus at 9090 and shows data on dashboards
+
+All tools run locally on a Red Hat VM via systemd services
+
+Steps Involved:
+VM Setup: Create a Red Hat VM on VMware and update the OS
+
+Install Node Exporter: Expose system metrics on port 9100
+
+Install Prometheus: Configure to scrape Node Exporter and set alerting rules
+
+Install Alertmanager: Set up alert routing with default receiver
+
+Install Grafana: Add Prometheus as a data source and import dashboards
+
+Test Setup: Simulate CPU load using stress and observe alerts.
+
+
+Conclusion:
+This project delivers a complete and portable DevOps monitoring sandbox ideal for self-learning and training. 
+By integrating Prometheus, Grafana, Alertmanager, and Node Exporter into one VM, users can gain hands-on experience 
+with real-world observability tools in a safe local environment. With automation scripts and pre-configured alerts, 
+he sandbox is ready-to-use and 
+easily extendable for future experimentation or classroom use.
+
+
+
+
+
+
+
+
+
+
