@@ -1,0 +1,19 @@
+Tools Used:
+1.Virtualization & Operating System
+1.a.VMware Workstation/Player
+1.b.Red Hat Enterprise Linux (RHEL)
+
+2.Monitoring & Visualization Tools
+2.a.Prometheus
+2.b.Node Exporter
+2.c.Grafana
+
+3.Alerting
+3.a.Alertmanager
+
+4.Automation & Scripting
+4.a.Shell Scripts
+Used to automate the installation and configuration of all monitoring components to simplify
+setup and ensure reproducibility
+
+
