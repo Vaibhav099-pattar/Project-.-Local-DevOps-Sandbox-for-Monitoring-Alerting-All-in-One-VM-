@@ -1,0 +1,17 @@
+Title: Local DevOps Sandbox for Monitoring & Alerting (All-in-One VM)
+
+This project aims to build a self-contained DevOps sandbox environment designed for training, testing, and experimentation with modern 
+monitoring and alerting tools. The environment is provisioned using a single virtual machine (VM) running 
+on VMware with Red Hat OS, and automates the installation and configuration of a complete monitoring stack
+including Prometheus, Node Exporter, Grafana, and Alertmanager.
+
+The VM simulates real-world infrastructure and enables users to monitor system metrics, 
+visualize data on interactive dashboards, and receive alerts on predefined thresholds such as CPU,
+memory, and disk usage. Configuration is automated through shell scripts, ensuring repeatability and ease of use.
+Grafana dashboards and Prometheus alerting rules are preconfigured to help users quickly understand
+how observability works in practice.
+
+The sandbox provides a safe and isolated setup for DevOps learners to explore open-source tools, test alert configurations,
+and analyze system performance metrics—making it a powerful resource for skill development without needing access to 
+cloud infrastructure.
+
