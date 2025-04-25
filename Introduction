@@ -1,0 +1,23 @@
+In the world of DevOps, real-time monitoring and proactive alerting are critical for maintaining system reliability, 
+ensuring high availability, and quickly detecting infrastructure issues. However, hands-on access to such tools in a safe and
+controlled environment is often limited—especially for
+learners, testers, and early-stage practitioners.
+
+This project introduces a Local DevOps Sandbox, an all-in-one virtual machine that simulates a complete monitoring and alerting setup. Built on a Red Hat-based VM running on VMware, the sandbox comes pre-installed with powerful open-source tools like:
+
+Prometheus – for collecting and storing time-series metrics
+
+Node Exporter – for exposing hardware and OS metrics
+
+Grafana – for data visualization and dashboarding
+
+Alertmanager – for managing and routing alert notifications
+
+The VM environment replicates core DevOps observability practices in a local setup, allowing users to
+monitor CPU, memory, disk usage, and other system metrics while exploring the configuration and behavior
+of automated alerts.
+
+Whether you're a student, DevOps enthusiast, or professional looking to experiment with monitoring tools,
+this sandbox offers a simple, isolated platform to learn and build confidence before working with production
+systems or cloud environments.
+
