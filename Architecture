@@ -1,0 +1,51 @@
+The architecture of this sandbox environment is designed to emulate a basic observability stack typically used in 
+real-world DevOps infrastructures. All components are deployed on a single Red Hat-based
+VM hosted on VMware, ensuring ease of setup and isolation.
+
+Components Overview:
+Node Exporter
+
+Installed on the same VM to expose system-level metrics (CPU, memory, disk, etc.) to Prometheus.
+
+Runs as a background service on port 9100.
+
+Prometheus:
+The core monitoring tool that scrapes metrics from Node Exporter and stores them in a time-series database.
+Runs on port 9090 and is configured to collect metrics at defined intervals.
+Also responsible for evaluating alerting rules and pushing alerts to Alertmanager.
+
+Alertmanager:
+Listens for alerts from Prometheus and manages alert routing, grouping, silencing, and notification.
+Runs on port 9093.
+
+Grafana:
+Connects to Prometheus as a data source and provides rich visual dashboards.
+Offers predefined templates like the Node Exporter Full dashboard for easy insights.
+Runs on port 3000.
+
+[Node Exporter]  --->  [Prometheus]  --->  [Alertmanager]
+        |                    |
+        |                    |
+        +--->  [Grafana] <---+
+
+Deployment Summary:
+Host Platform: VMware Workstation / VMware Player.
+OS: Red Hat-based Linux (RHEL/CentOS/AlmaLinux).
+Automation: Shell scripts or manual setup
+Ports Used:
+
+Prometheus: 9090
+
+Node Exporter: 9100
+
+Alertmanager: 9093
+
+Grafana: 3000
+
+
+This modular and self-contained architecture helps users easily understand
+how each tool integrates 
+and functions within a monitoring and alerting ecosystem
+
+
+
