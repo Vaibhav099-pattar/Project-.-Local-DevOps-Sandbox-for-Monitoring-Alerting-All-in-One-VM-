@@ -1,0 +1,15 @@
+This project successfully demonstrates the setup of a fully functional local DevOps sandbox that integrates essential 
+monitoring and alerting tools using open-source technologies. By deploying Prometheus, Grafana, Node Exporter,
+and Alertmanager on a single Red Hat-based virtual machine, we created a simulated production-like environment 
+suitable for learning, testing, and practicing DevOps monitoring workflows.
+
+The sandbox allows users to visualize real-time system metrics, create custom dashboards, and
+configure alerting rules that notify users of critical events such as high CPU usage or low disk space.
+All configurations and services are automated using shell scripts, ensuring that the environment is reproducible
+and easy to set up for others.
+
+This project not only enhances understanding of key observability tools but also provides hands-on
+experience in setting up and managing an end-to-end monitoring pipeline. It serves as a valuable resource
+for students, DevOps learners, and professionals aiming to strengthen their skills in system monitoring, alerting, 
+and infrastructure visibility.
+
